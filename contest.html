@@ -1,0 +1,127 @@
+<!DOCTYPE html><!-- Ryan King -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>File Upload Assignment</title>
+
+    <style>
+        body {
+            background-image: url(https://digitalasset.intuit.com/IMAGE/A8K6wIHO2/photographer-taking-pictures-on-the-edge-of-a-cliff_INF31371.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0px;
+        }
+        
+        body,
+        input {
+            font-family: arial, sans-serif;
+            font-size: 100%;
+        }
+        
+        h1 {
+            font-size: 1.8em;
+        }
+        
+        h2 {
+            font-size: 1.25em;
+        }
+        
+        p {
+            color: #A0522D;
+        }
+        
+        #wrapper {
+            width: auto;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+        }
+        
+        .flexcontainer {
+            width: 350px;
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .flexcontainer label {
+            width: 50px;
+        }
+        
+        [type=submit],
+        [type=reset] {
+            margin-top: 25px;
+            padding: 10px;
+            border: none;
+            background-color: rgba(163, 84, 46, 0.2);
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-column-gap: 2px;
+            grid-template-columns: 150px 150px 150px;
+            padding: 0px;
+        }
+        
+        .grid-item {
+            background-color: rgba(163, 84, 46, 0.2);
+            padding: 5px;
+            text-align: center;
+        }
+        
+        aside {
+            font-size: 0.8em;
+        }
+        
+        form {
+            border-top: 1px solid #000;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Photo Contest</h1>
+        </header>
+
+        <section>
+            <h2>Upload your favorite photo for entry into our contest!</h2>
+
+            <aside class="grid-container">
+                <div class="grid-item">1st Place: $1,000.00</div>
+                <div class="grid-item">2nd Place: $500.00</div>
+                <div class="grid-item">3rd Place: $250.00</div>
+            </aside>
+
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+
+                <div class="flexcontainer">
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" name="name" maxlength="30" required>
+                </div>
+
+                <div class="flexcontainer">
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email" maxlength="30" required>
+                </div>
+
+                <div class="flexcontainer">
+                    <label for="photo">Photo: </label>
+                    <input type="file" id="photo" name="photo" required>
+                </div>
+
+                <p>Please upload a jpg, jpeg, or png file.</p>
+                <input type="submit" value="Upload Photo" class="clear">
+
+                <input type="reset" value="Clear Form">
+            </form>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
